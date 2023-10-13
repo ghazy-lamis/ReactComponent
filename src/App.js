@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import bannerImage from './architect.jpg';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+   <div>
+    {/* NavBar */}
 
+    <header id="navbar-top">
+      <nav className="navbar-container">
+        <a href="#home" className="logo"><b>BR</b> Architects</a>
+        <div className="menu-links">
+          <a href="#projects" className="menu-item">Projects</a>
+          <a href="#about" className="menu-item">About</a>
+          <a href="#contact" className="menu-item">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    {/* End of NavBar */}
+
+            {/* Start of Banner Section */}
+            <section className="banner" id="home-banner">
+                <img src={bannerImage} alt="Banner Image" className="banner-image"/>
+                <div className="banner-text-container">
+                    <h1 className="banner-title">
+                        <span className="title-bold">BR</span>
+                        <span className="title-light"> Architects</span>
+                    </h1>
+                </div>
+            </section>
+            {/* End of Banner Section */}
+        </div>
+  );
+} 
 export default App;

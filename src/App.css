@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+
+html{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
+/* Navbar-top */
+
+#navbar-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-container {
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+
+#menu-links{
+  display: flex;
+}
+
+.menu-item{
+  margin-left: 16px;
+  text-decoration: none;
+  color: black;
+}
+/* Hide menu links on small screens */
+@media screen and (max-width: 600px) {
+  #menu-links {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* END OF NAVBAR STYLING */
+/*********************************************************************************************************/
+/* START OF BANNER STYLING */
+
+.banner{
+  position: relative;
+  max-width: 1550;
+  margin: auto;
+}
+
+.banner-image{
+  width: 100%;
+  top: 50%;
+}
+
+.banner-text-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 0;
+}
+
+.banner-title{
+  font-size: 3rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title-bold{
+  background-color: black;
+  opacity: 0.7;
+  padding: 4px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.title-light{
+  display: inline;
+  
+}
+
+/* Hide .title-light on small screens */
+@media screen and (max-width: 600px) {
+  .title-light {
+    display: none;
   }
 }
+
+/* END OF BANNER STYLING */
